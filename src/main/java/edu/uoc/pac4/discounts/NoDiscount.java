@@ -1,4 +1,4 @@
-package edu.uoc.pac4;
+package edu.uoc.pac4.discounts;
 
 public class NoDiscount implements Discount {
 
@@ -9,6 +9,6 @@ public class NoDiscount implements Discount {
 
     @Override
     public double calculate(double amount) {
-        return amount * 0.1;
+        return 0;
     }
 }

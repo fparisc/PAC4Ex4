@@ -1,4 +1,4 @@
-package edu.uoc.pac4;
+package edu.uoc.pac4.discounts;
 
 public class Premium implements Discount {
 

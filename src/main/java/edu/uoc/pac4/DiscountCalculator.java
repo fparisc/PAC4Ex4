@@ -1,5 +1,7 @@
 package edu.uoc.pac4;
 
+import edu.uoc.pac4.discounts.*;
+
 import java.util.List;
 
 public class DiscountCalculator {
@@ -17,7 +19,7 @@ public class DiscountCalculator {
 
     public double calculateDiscount(String clientType, double amount) {
         return discounts.stream()
-                .filter(s -> s.appliesTo(clientType))
+                .filter(discount -> discount.appliesTo(clientType))
                 .findFirst()
                 .orElse(new NoDiscount())
                 .calculate(amount);
